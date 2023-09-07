@@ -153,5 +153,18 @@ html {
     font-family: 'Futura';  /* Change the font to Futura */
 }
 
+/* Center the contact-section */
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Set height to 100% of the viewport */
+}
+
+/* Add a light grey section below */
+.grey-section {
+    background-color: lightgrey;  /* Set background color */
+    height: 100vh;  /* Set height to 100% of the viewport */
+}
 
 
