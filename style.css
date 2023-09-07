@@ -64,3 +64,18 @@
     font-style: italic;  /* Make it italic */
     font-family: "Copperplate", serif;  /* Fancier font */
 }
+.picture-box {
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    margin-left: 1in;  /* 1 inch from the left */
+    margin-top: 2in;  /* 2 inches from the top */
+    position: absolute;  /* This allows you to position it anywhere */
+    z-index: 2;  /* This ensures it's on top of the background */
+}
+
+.picture {
+    width: 100%;
+    height: auto;
+    border: 5px solid white;
+}
