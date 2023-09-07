@@ -23,6 +23,16 @@
     z-index: 2;
 }
 
+.white-box {
+    position: absolute;
+    top: 2in;
+    bottom: 2in;
+    left: 2in;
+    right: 2in;
+    background-color: white;
+    z-index: 1;  /* Behind the overlay-image but in front of the banner */
+}
+
 .top-bar {
     background-color: #DFF8F7;  /* Brightish blue */
     overflow: hidden;
