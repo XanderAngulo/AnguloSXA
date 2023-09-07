@@ -3,12 +3,24 @@
     padding: 0;
 }
 
+.banner-container {
+    position: relative;
+}
+
 .banner{
     width: 100%;
     height: 100vh;
     background-image:url(main.jpg);
     background-size: cover;
     background-position: center;
+}
+.overlay-image {
+    position: absolute;
+    top: 120;
+    left: 50;
+    width: 400px;  /* Or whatever size you want */
+    height: auto;
+    z-index: 2;
 }
 
 .top-bar {
@@ -69,7 +81,7 @@
     width: 300px;
     height: 300px;
     margin-left: 1in;  /* 1 inch from the left */
-    margin-top: 2in;  /* 2 inches from the top */
+    margin-top: 5in;  /* 2 inches from the top */
     position: absolute;  /* This allows you to position it anywhere */
     z-index: 2;  /* This ensures it's on top of the background */
 }
