@@ -21,6 +21,9 @@
         <div class="banner">
             <!-- Existing banner content here -->
         </div>
+        <div class="text-box" id="animated-text">
+            <!-- The JavaScript will populate this div -->
+        </div>
         <div class="white-box"></div>
         <img src="Xander.jpeg" alt="Xander" class="overlay-image">
     </div>
@@ -28,7 +31,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const nameElement = document.getElementById('animated-name');
-            const names = ['Cyber Security', 'Xander Angulo'];
+            const names = ['Xander Angulo', 'Cyber Security','Data Defense'];
             let index = 0;
             let subIndex = 0;
             let reverse = false;
@@ -70,6 +73,27 @@
     
             setInterval(writeName, 50);  // Run writeName every 50 ms for faster backspacing
         });
+        
+        document.addEventListener("DOMContentLoaded", function() {
+    const textElement = document.getElementById('animated-text');
+    const text = "Xander Angulo: A student at the crossroads of technology and cybersecurity. Balancing rigorous academics with a commitment to meaningful conversations and personal growth.";
+    let subIndex = 0;
+    let doneTyping = false;
+
+    function typeText() {
+        if (!doneTyping) {
+            if (subIndex < text.length) {
+                textElement.innerHTML += text[subIndex];
+                subIndex++;
+            } else {
+                doneTyping = true;  // Stop typing once the text is fully displayed
+            }
+        }
+    }
+
+    setInterval(typeText, 45);  // Run typeText every 100 milliseconds
+});
+
     </script>    
 </body>
 </html>
