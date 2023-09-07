@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image:url(main.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.top-bar {
+    background-color: #DFF8F7;  /* Brightish blue */
+    overflow: hidden;
+    position: relative;
+    height: 160px;  /* Increased height */
+}
+
+.top-buttons {
+    float: right;
+}
+
+.top-button {
+    background-color: #DFF8F7;  /* Default to top-bar color */
+    color: black;  /* Text color is black by default */
+    border: none;
+    padding: 40px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 35px 1px;
+    cursor: pointer;
+    font-family: "Copperplate", serif;  /* Fancier font */
+    transition: background-color 0.3s, color 0.3s;  /* Animation for background and color */
+    font-size: 18;
+}
+
+.top-button:hover, .top-button:active {
+    background-color: #123740;  /* Change to this color when hovered or clicked */
+    color: white;  /* Text turns white when hovered or clicked */
+}
+
+
+.white-box {
+    background-color: white;
+    margin: 50px;
+    padding: 20px;
+    opacity: 0.9;
+}
+
+.box-name {
+    font-size: 48px;
+    color: black;
+}
+.name {
+    float: left;
+    color: black;
+    text-align: left;
+    padding: 0px 50px;
+    font-size: 48px;  /* Super big */
+    line-height: 160px;  /* Center vertically */
+    font-style: italic;  /* Make it italic */
+    font-family: "Copperplate", serif;  /* Fancier font */
+}

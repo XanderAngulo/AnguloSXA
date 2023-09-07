@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-buttons">
+            <button class="top-button" id="home-button">HOME</button>
+            <button class="top-button" id="about-me-button">MORE ABOUT ME</button>
+            <button class="top-button" id="socials and contact">SOCIALS</button>
+            <a href="https://www.linkedin.com/in/steve-angulo-117250290/" target="_blank">
+                <button class="top-button" id="linkedin-button">LINKEDIN</button>
+            </a>
+        </div>
+        <div class="name" id="animated-name">
+            <!-- The JavaScript will populate this div -->
+        </div>        
+    </div>
+    <div class="banner">
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const nameElement = document.getElementById('animated-name');
+            const names = ['Cyber Security', 'Xander Angulo'];
+            let index = 0;
+            let subIndex = 0;
+            let reverse = false;
+            let currentName = "Steve ";
+            let waiting = false;
+            
+            nameElement.innerHTML = currentName;  // Initialize with "Steve "
+    
+            function writeName() {
+                if (waiting) return;
+    
+                if (!reverse) {
+                    if (subIndex < names[index].length) {
+                        currentName = "Steve " + names[index].substring(0, subIndex + 1);
+                        nameElement.innerHTML = currentName;
+                        subIndex++;
+                    } else {
+                        reverse = true;
+                        waiting = true;
+                        setTimeout(() => {
+                            waiting = false;
+                            writeName();
+                        }, 3000);  // Wait for 3 seconds before erasing
+
+                        return;
+                    }
+                } else {
+                    if (subIndex >= 0) {
+                        currentName = "Steve " + names[index].substring(0, subIndex);
+                        nameElement.innerHTML = currentName;
+                        subIndex--;
+                    } else {
+                        reverse = false;
+                        index = (index + 1) % names.length;
+                        subIndex = 0;
+                    }
+                }
+            }
+    
+            setInterval(writeName, 50);  // Run writeName every 50 ms for faster backspacing
+        });
+    </script>    
+</body>
+</html>
