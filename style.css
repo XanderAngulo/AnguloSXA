@@ -166,5 +166,30 @@ html {
     background-color: lightgrey;  /* Set background color */
     height: 100vh;  /* Set height to 100% of the viewport */
 }
+/* ... Existing CSS ... */
+
+/* Mobile devices */
+@media only screen and (max-width: 600px) {
+    /* Top bar */
+    .top-bar {
+        flex-direction: column;
+    }
+    .top-buttons {
+        margin-bottom: 20px;
+    }
+
+    /* Contact section */
+    .contact-section {
+        font-size: 18px;
+    }
+    .contact-details {
+        display: block;  /* Stacked layout */
+        margin: 20px auto;
+    }
+    .contact-icon {
+        width: 50px;
+    }
+}
+
 
 
