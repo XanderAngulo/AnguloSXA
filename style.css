@@ -161,13 +161,6 @@ html {
     height: 100vh;  /* Set height to 100% of the viewport */
 }
 
-/* Add a light grey section below */
-.grey-section {
-    background-color: lightgrey;  /* Set background color */
-    height: 100vh;  /* Set height to 100% of the viewport */
-}
-/* ... Existing CSS ... */
-
 /* Mobile devices */
 @media only screen and (max-width: 600px) {
     /* Top bar */
